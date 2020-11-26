@@ -47,7 +47,6 @@ int main()
     auto begin = chrono::steady_clock::now();
     if (sortType == 1)
     {
-        //sort.quickSorting(arr1);
         newArray = qs.sort(arr1);
     }
     else if (sortType == 2)
