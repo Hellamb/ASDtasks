@@ -1,0 +1,2 @@
+D:\ASDtasks\ASDtasks\Debug\ASDtasks.exe
+D:\ASDtasks\ASDtasks\Debug\ASDtasks.pdb

@@ -1,0 +1,6 @@
+﻿  Main.cpp
+D:\ASDtasks\ASDtasks\Main.cpp(20,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  MergeSorter.cpp
+  QuickSorter.cpp
+  Создание кода...
+  ASDtasks.vcxproj -> D:\ASDtasks\ASDtasks\Debug\ASDtasks.exe
