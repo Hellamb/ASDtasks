@@ -65,7 +65,6 @@ int main()
 
     cout << endl << "Час виконання: " << algTime.count() << " мс";
 
-
 }
 
 

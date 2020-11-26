@@ -370,3 +370,5 @@ ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
 *.db-shm
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db-shm
+*.db-wal
+*.db
