@@ -54,7 +54,7 @@ int main()
     {
         arr1 = qs.sort(arr1);
     }
-    //printArray(newArray);
+ 
     auto begin = chrono::steady_clock::now();
     if (sortType == 1)
     {
