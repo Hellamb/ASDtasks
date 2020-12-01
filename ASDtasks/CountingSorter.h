@@ -3,10 +3,9 @@
 
 using namespace std;
 
-class ShellSorter
+class CountingSorter
 {
 public:
-
-    vector<long> sort(vector<long>& arr);
+	vector<long> sort(vector<long>& arr);
 };
 

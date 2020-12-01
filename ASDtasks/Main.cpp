@@ -10,6 +10,7 @@
 #include "MergeSorter.h"
 #include "ShellSorter.h"
 #include "HeapSorter.h"
+#include "CountingSorter.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ int main()
     MergeSorter ms;
     ShellSorter shs;
     HeapSorter hs;
+    CountingSorter cs;
 
     vector<long> arr1 = {};
 
@@ -35,7 +37,8 @@ int main()
     {
         arr1.push_back(rand() % 100 + 1);
     }
-    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
+
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
@@ -56,6 +59,10 @@ int main()
     else if (sortType == 2)
     {
         newArray = hs.sort(arr1);
+    }
+    else if (sortType == 3)
+    {
+        newArray = cs.sort(arr1);
     }
     else
     {
