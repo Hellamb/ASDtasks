@@ -7,6 +7,7 @@ using namespace std;
 class RadixSorter
 {
 public:
-    vector<long> sort(vector<long> arr);
+    void eachDigitSort(vector<long>& arr, int n, int dig);
+    vector<long> sort(vector<long>& arr);
 };
 

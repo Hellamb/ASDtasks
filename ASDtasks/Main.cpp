@@ -13,7 +13,6 @@
 #include "CountingSorter.h"
 #include "RadixSorter.h"
 #include "BucketSorter.h"
-#include "Radix2Sorter.h"
 
 using namespace std;
 
@@ -31,7 +30,6 @@ int main()
     CountingSorter cs;
     RadixSorter rs;
     BucketSorter bs;
-    Radix2Sorter r2s;
 
     vector<long> arr1 = {};
 
@@ -73,7 +71,7 @@ int main()
     else if (sortType == 4)
     {
         //newArray = rs.sort(arr1);
-        newArray = r2s.sort(arr1);
+        newArray = rs.sort(arr1);
     }
     else if (sortType == 5)
     {
