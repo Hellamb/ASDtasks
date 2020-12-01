@@ -17,6 +17,7 @@
 using namespace std;
 
 void printArray(vector<long> arr);
+void printArray(long array[], long arraySize);
 
 int main()
 {
@@ -31,16 +32,23 @@ int main()
     RadixSorter rs;
     BucketSorter bs;
 
-    vector<long> arr1 = {};
+
 
     int numberOfIterations;
     cout << "Give a number of elements: ";
     cin >> numberOfIterations;
 
+    vector<long> arr1 = {};
+    long* arr2 = new long[numberOfIterations];
     for (int i = 0; i < numberOfIterations; i++)
     {
         arr1.push_back(rand() % 100 + 1);
     }
+    for (int i = 0; i < numberOfIterations; i++)
+    {
+        arr2[i] = rand() % 100 + 1;
+    }
+
 
     cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort" << endl;
     int sortType;
@@ -62,7 +70,7 @@ int main()
     }
     else if (sortType == 2)
     {
-        newArray = hs.sort(arr1);
+        arr2 = hs.sort(arr2, numberOfIterations);
     }
     else if (sortType == 3)
     {
@@ -70,7 +78,6 @@ int main()
     }
     else if (sortType == 4)
     {
-        //newArray = rs.sort(arr1);
         newArray = rs.sort(arr1);
     }
     else if (sortType == 5)
@@ -83,11 +90,12 @@ int main()
         return 0;
     }
     auto end = chrono::steady_clock::now();
-    auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
+    auto algTime = chrono::duration_cast<chrono::microseconds>(end - begin);
     cout << endl;
-   //printArray(newArray);
+    //printArray(newArray);
+    printArray(arr2, numberOfIterations);
 
-    cout << endl << "To sort this array " << algTime.count() << " ms were spent";
+    cout << endl << "To sort this array " << algTime.count() << " mcs were spent";
 
 }
 
@@ -95,6 +103,14 @@ int main()
 void printArray(vector<long> array)
 {
     int arraySize = array.size();
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << array[i] << ", ";
+    }
+}
+
+void printArray(long array[],long arraySize)
+{
     for (int i = 0; i < arraySize; i++)
     {
         cout << array[i] << ", ";
