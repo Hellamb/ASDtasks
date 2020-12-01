@@ -72,7 +72,7 @@ int main()
     auto end = chrono::steady_clock::now();
     auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
     cout << endl;
-    //printArray(newArray);
+    printArray(newArray);
 
     cout << endl << "To sort this array " << algTime.count() << " ms were spent";
 
