@@ -44,7 +44,8 @@ int main()
         arr1.push_back(rand() % 100 + 1);
     }
 
-    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort" << endl;
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
+    cout << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
