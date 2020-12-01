@@ -363,18 +363,13 @@ FodyWeavers.xsd
 
 *.suo
 .suo
-/.vs/ASDtasks/v16
-ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
+ASDtasks/.vs/ASDtasks/v16
 *.db-wal
-*.db
 *.db-shm
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db-shm
-*.db-wal
-*.db
-ASDtasks/.vs/ASDtasks/v16/Browse.VC.db-wal
+*.dbASDtasks/.vs/ASDtasks/v16/Browse.VC.db-wal
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db-shm
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
 ASDtasks/.vs/ASDtasks/v16/Browse.VC.db-wal
-ASDtasks/.vs/ASDtasks/v16/Browse.VC.db
-*.db
+

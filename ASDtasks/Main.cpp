@@ -12,6 +12,7 @@
 #include "HeapSorter.h"
 #include "CountingSorter.h"
 #include "RadixSorter.h"
+#include "BucketSorter.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ int main()
     HeapSorter hs;
     CountingSorter cs;
     RadixSorter rs;
+    BucketSorter bs;
 
     vector<long> arr1 = {};
 
@@ -40,7 +42,7 @@ int main()
         arr1.push_back(rand() % 100 + 1);
     }
 
-    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl;
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort";
     int sortType;
     cin >> sortType;
     vector<long> newArray;
@@ -70,6 +72,10 @@ int main()
     {
         newArray = rs.sort(arr1);
     }
+    else if (sortType == 5)
+    {
+        newArray = bs.sort(arr1);
+    }
     else
     {
         cout << "Error";
@@ -78,7 +84,7 @@ int main()
     auto end = chrono::steady_clock::now();
     auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
     cout << endl;
-    //printArray(newArray);
+    printArray(newArray);
 
     cout << endl << "To sort this array " << algTime.count() << " ms were spent";
 
