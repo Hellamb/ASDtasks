@@ -17,8 +17,8 @@ void printArray(vector<long> arr);
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
     srand(time(NULL));
     QuickSorter qs;
     MergeSorter ms;
@@ -28,19 +28,19 @@ int main()
     vector<long> arr1 = {};
 
     int numberOfIterations;
-    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: ";
+    cout << "Give a number of elements: ";
     cin >> numberOfIterations;
 
     for (int i = 0; i < numberOfIterations; i++)
     {
         arr1.push_back(rand() % 100 + 1);
     }
-    cout << "Îáåð³òü òèï ñîðòóâàííÿ" << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
 
-    cout << "Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½?" << endl << "1 - ï¿½ï¿½ï¿½" << endl << "ï¿½ï¿½ 1 - ï¿½ï¿½" << endl;
+    cout << "Sorted or unsorted array?" << endl << "1 - sorted" << endl << "not 1 - unsorted" << endl;
     int isSorted;
     cin >> isSorted;
     if (isSorted == 1)
@@ -67,7 +67,7 @@ int main()
     cout << endl;
     //printArray(newArray);
 
-    cout << endl << "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " << algTime.count() << " ï¿½ï¿½";
+    cout << endl << "To sort this array " << algTime.count() << " ms were spent";
 
 }
 
