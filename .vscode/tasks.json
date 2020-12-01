@@ -12,6 +12,8 @@
 				"${fileDirname}\\QuickSorter.cpp",
 				"${fileDirname}\\ShellSorter.cpp",
 				"${fileDirname}\\BucketSorter.cpp",
+				"${fileDirname}\\CountingSorter.cpp",
+				"${fileDirname}\\RadixSorter.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
