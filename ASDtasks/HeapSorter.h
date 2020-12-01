@@ -45,5 +45,9 @@ public:
         return arr;
     }
 
+    vector<long> sort2(vector<long> arr);
+    vector<long> sort2_help(vector<long> arr);
+
+
 };
 
