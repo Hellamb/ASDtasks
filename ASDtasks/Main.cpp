@@ -42,7 +42,7 @@ int main()
         arr1.push_back(rand() % 100 + 1);
     }
 
-    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort";
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
@@ -84,7 +84,7 @@ int main()
     auto end = chrono::steady_clock::now();
     auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
     cout << endl;
-    printArray(newArray);
+   //printArray(newArray);
 
     cout << endl << "To sort this array " << algTime.count() << " ms were spent";
 

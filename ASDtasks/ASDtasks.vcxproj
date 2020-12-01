@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BucketSorter.cpp" />
     <ClCompile Include="CountingSorter.cpp" />
     <ClCompile Include="HeapSorter.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="ShellSorter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BucketSorter.h" />
     <ClInclude Include="CountingSorter.h" />
     <ClInclude Include="HeapSorter.h" />
     <ClInclude Include="MergeSorter.h" />

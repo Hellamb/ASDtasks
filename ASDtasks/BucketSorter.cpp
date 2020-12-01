@@ -9,7 +9,7 @@ vector<long> BucketSorter::sort(vector<long>& array)
 
     long buckets_size = max_elem - min_elem + 1;
 
-    vector<long> buckets[buckets_size];
+    vector<long> *buckets = new vector<long>[buckets_size];
 
     for (long elem : array)
     {
