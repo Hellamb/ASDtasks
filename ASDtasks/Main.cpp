@@ -8,6 +8,8 @@
 
 #include "QuickSorter.h"
 #include "MergeSorter.h"
+#include "ShellSorter.h"
+#include "HeapSorter.h"
 
 using namespace std;
 
@@ -20,23 +22,25 @@ int main()
     srand(time(NULL));
     QuickSorter qs;
     MergeSorter ms;
+    ShellSorter shs;
+    HeapSorter hs;
 
     vector<long> arr1 = {};
 
     int numberOfIterations;
-    cout << "������ ������� �������� � �����: ";
+    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: ";
     cin >> numberOfIterations;
 
     for (int i = 0; i < numberOfIterations; i++)
     {
         arr1.push_back(rand() % 100 + 1);
     }
-    cout << "������ ��� ����������" << endl << "1 - ������ ����������" << endl << "2 - ���������� �������" << endl;
+    cout << "Îáåð³òü òèï ñîðòóâàííÿ" << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
 
-    cout << "³���������� ������������ �����?" << endl << "1 - ���" << endl << "�� 1 - ��" << endl;
+    cout << "Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½?" << endl << "1 - ï¿½ï¿½ï¿½" << endl << "ï¿½ï¿½ 1 - ï¿½ï¿½" << endl;
     int isSorted;
     cin >> isSorted;
     if (isSorted == 1)
@@ -47,11 +51,11 @@ int main()
     auto begin = chrono::steady_clock::now();
     if (sortType == 1)
     {
-        newArray = qs.sort(arr1);
+        newArray = shs.sort(arr1);
     }
     else if (sortType == 2)
     {
-        newArray = ms.sort(arr1);
+        newArray = hs.sort(arr1);
     }
     else
     {
@@ -61,9 +65,9 @@ int main()
     auto end = chrono::steady_clock::now();
     auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
     cout << endl;
-    printArray(newArray);
+    //printArray(newArray);
 
-    cout << endl << "��� ���������: " << algTime.count() << " ��";
+    cout << endl << "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " << algTime.count() << " ï¿½ï¿½";
 
 }
 

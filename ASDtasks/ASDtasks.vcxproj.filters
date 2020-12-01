@@ -24,12 +24,24 @@
     <ClCompile Include="MergeSorter.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ShellSorter.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapSorter.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuickSorter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="MergeSorter.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ShellSorter.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapSorter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

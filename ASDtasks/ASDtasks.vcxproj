@@ -139,13 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HeapSorter.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MergeSorter.cpp" />
     <ClCompile Include="QuickSorter.cpp" />
+    <ClCompile Include="ShellSorter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HeapSorter.h" />
     <ClInclude Include="MergeSorter.h" />
     <ClInclude Include="QuickSorter.h" />
+    <ClInclude Include="ShellSorter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
