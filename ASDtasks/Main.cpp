@@ -18,8 +18,8 @@ void printArray(vector<long> arr);
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
     srand(time(NULL));
     QuickSorter qs;
     MergeSorter ms;
@@ -30,19 +30,20 @@ int main()
     vector<long> arr1 = {};
 
     int numberOfIterations;
-    cout << "Введіть кількість елементів в масиві: ";
+    cout << "Give a number of elements: ";
     cin >> numberOfIterations;
 
     for (int i = 0; i < numberOfIterations; i++)
     {
         arr1.push_back(rand() % 100 + 1);
     }
-    cout << "Оберіть тип сортування" << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl <<"3 - Counting sort" << endl;
+
+    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl << "3 - Counting sort" << endl;
     int sortType;
     cin >> sortType;
     vector<long> newArray;
 
-    cout << "Відсортувати відсортований масив?" << endl << "1 - так" << endl << "не 1 - ні" << endl;
+    cout << "Sorted or unsorted array?" << endl << "1 - sorted" << endl << "not 1 - unsorted" << endl;
     int isSorted;
     cin >> isSorted;
     if (isSorted == 1)
@@ -73,7 +74,7 @@ int main()
     cout << endl;
     //printArray(newArray);
 
-    cout << endl << "Час виконання: " << algTime.count() << " мс";
+    cout << endl << "To sort this array " << algTime.count() << " ms were spent";
 
 }
 
