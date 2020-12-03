@@ -14,6 +14,7 @@
 				"${fileDirname}\\BucketSorter.cpp",
 				"${fileDirname}\\CountingSorter.cpp",
 				"${fileDirname}\\RadixSorter.cpp",
+				"${fileDirname}\\HeapSorter.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
