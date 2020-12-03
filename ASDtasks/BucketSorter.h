@@ -11,5 +11,5 @@ public:
     vector<long> sort(vector<long>& array);
 
 private:
-    const static int BUCKET_SIZE = 5000;
+    const static int BUCKET_SIZE = 100;
 };
