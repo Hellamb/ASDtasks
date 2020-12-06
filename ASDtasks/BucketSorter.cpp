@@ -7,11 +7,11 @@ vector<long> BucketSorter::sort(vector<long>& array)
     auto max_elem = *max_element(array.begin(), array.end());
     auto min_elem = *min_element(array.begin(), array.end());
 
-    double d = (double) ((max_elem - min_elem + 1)) / BUCKET_SIZE;
+    double d = (double) ((max_elem - min_elem + 1)) / BUCKET_NUMBER;
 
     long divider = (long) ceil(d);
 
-    vector<long> *buckets = new vector<long>[BUCKET_SIZE];
+    vector<long> *buckets = new vector<long>[BUCKET_NUMBER];
 
     for (long elem : array)
     {
@@ -22,7 +22,7 @@ vector<long> BucketSorter::sort(vector<long>& array)
 
     vector<long> sorted_array{};
 
-    for (int k = 0; k < BUCKET_SIZE; k++)
+    for (int k = 0; k < BUCKET_NUMBER; k++)
     {
         long n = buckets[k].size();
 
