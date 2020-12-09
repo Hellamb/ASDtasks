@@ -145,7 +145,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MergeSorter.cpp" />
     <ClCompile Include="QuickSorter.cpp" />
-    <ClCompile Include="Radix2Sorter.cpp" />
     <ClCompile Include="RadixSorter.cpp" />
     <ClCompile Include="ShellSorter.cpp" />
   </ItemGroup>
@@ -155,7 +154,6 @@
     <ClInclude Include="HeapSorter.h" />
     <ClInclude Include="MergeSorter.h" />
     <ClInclude Include="QuickSorter.h" />
-    <ClInclude Include="Radix2Sorter.h" />
     <ClInclude Include="RadixSorter.h" />
     <ClInclude Include="ShellSorter.h" />
   </ItemGroup>
