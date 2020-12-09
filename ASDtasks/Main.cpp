@@ -39,6 +39,7 @@ int main()
 
     
     int numberOfIterations;
+
     double commision;
     cout << "Give a number of bank accounts: ";
     cin >> numberOfIterations;
@@ -57,6 +58,7 @@ int main()
     }
     cout << "Before: " << sum << endl;
  
+
     //auto begin = chrono::steady_clock::now();
 
     cout <<"After: "<< cor.func(arr1, commision);
@@ -64,7 +66,6 @@ int main()
     //auto end = chrono::steady_clock::now();
     //auto algTime = chrono::duration_cast<chrono::microseconds>(end - begin);
     //cout << endl;
-
    // cout << endl << "To sort this array " << algTime.count() << " mcs were spent";
     
 }

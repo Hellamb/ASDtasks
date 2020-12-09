@@ -149,7 +149,6 @@
     <ClCompile Include="QuickSorter.cpp" />
     <ClCompile Include="RadixSorter.cpp" />
     <ClCompile Include="ShellSorter.cpp" />
-    <ClCompile Include="StringTask2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BucketSorter.h" />
@@ -161,7 +160,6 @@
     <ClInclude Include="QuickSorter.h" />
     <ClInclude Include="RadixSorter.h" />
     <ClInclude Include="ShellSorter.h" />
-    <ClInclude Include="StringTask2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

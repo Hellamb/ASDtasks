@@ -29,16 +29,7 @@ int Levenshtein::lev_dist(string s1, string s2)
         for (int j = 1; j <= size2; j++)
         {
             cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
-            if ((i > 1) && (j > 1) && (s1[i] == s2[j - 1]) && (s1[i - 1] == s2[j]))
-            {
-                int a = min(d[i - 1][j], d[i][j - 1] + 1);
-                int b = min(d[i][j] + cost, d[i - 2][j - 2]);
-                d[i][j] = min(a, b);
-            }
-            else
-            {
-                d[i][j] = min(min(d[i][j - 1] + 1, d[i - 1][j] + 1), d[i - 1][j - 1] + cost);
-            }
+            d[i][j] = min(min(d[i][j - 1] + 1, d[i - 1][j] + 1), d[i - 1][j - 1] + cost);
         }
     return d[size1][size2];
 }
