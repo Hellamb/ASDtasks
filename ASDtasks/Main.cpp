@@ -11,6 +11,7 @@
 
 
 #include "Corruption.h"
+#include "StringTask2.h"
 #include "Levenshtein.h"
 
 using namespace std;
@@ -28,15 +29,15 @@ int main()
 
     Corruption cor;
     Levenshtein lev;
+    StringTask2 st;
 
-    string s1, s2;
-    cout << "Give first string: ";
-    cin >> s1;
-    cout << "Give second string: ";
-    cin >> s2;
-    int ans = lev.lev_dist(s1, s2);
-    cout << "levenshtein distance is " << ans << endl;
+    /*
+    cout << "Maximum SubString is " << st.task1("Hello", "here is Hello") << endl;
+    cout << "Minimum SubString is " << st.task2("Hello", "here is Hello") << endl;
+    cout << "levenshtein distance is " << lev.lev_dist("Hello", "Here") << endl;
+    */
 
+    
     int numberOfIterations;
     double commision;
     cout << "Give a number of bank accounts: ";
@@ -49,22 +50,23 @@ int main()
     {
         arr1.push_back(rand() % 10000 + 1);
     }
-
-    /*{
+    double sum = 0;
+    for(double n : arr1)
+    {
         sum += n;
     }
-    cout << "Before: " << sum << endl;*/
+    cout << "Before: " << sum << endl;
  
-    auto begin = chrono::steady_clock::now();
+    //auto begin = chrono::steady_clock::now();
 
     cout <<"After: "<< cor.func(arr1, commision);
 
-    auto end = chrono::steady_clock::now();
-    auto algTime = chrono::duration_cast<chrono::microseconds>(end - begin);
-    cout << endl;
+    //auto end = chrono::steady_clock::now();
+    //auto algTime = chrono::duration_cast<chrono::microseconds>(end - begin);
+    //cout << endl;
 
-    cout << endl << "To sort this array " << algTime.count() << " mcs were spent";
-
+   // cout << endl << "To sort this array " << algTime.count() << " mcs were spent";
+    
 }
 
 
