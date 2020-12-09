@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BucketSorter.cpp" />
+    <ClCompile Include="Corruption.cpp" />
     <ClCompile Include="CountingSorter.cpp" />
     <ClCompile Include="HeapSorter.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BucketSorter.h" />
+    <ClInclude Include="Corruption.h" />
     <ClInclude Include="CountingSorter.h" />
     <ClInclude Include="HeapSorter.h" />
     <ClInclude Include="MergeSorter.h" />

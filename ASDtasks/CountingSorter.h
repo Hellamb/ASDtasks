@@ -6,6 +6,6 @@ using namespace std;
 class CountingSorter
 {
 public:
-	vector<long> sort(vector<long>& arr);
+	vector<double> sort(vector<double>& arr);
 };
 
