@@ -8,14 +8,10 @@
 
 #include "QuickSorter.h"
 #include "MergeSorter.h"
-#include "ShellSorter.h"
-#include "HeapSorter.h"
-#include "CountingSorter.h"
-#include "RadixSorter.h"
-#include "BucketSorter.h"
+
 
 #include "Corruption.h"
-#include "StringTask2.h"
+#include "Levenshtein.h"
 
 using namespace std;
 
@@ -28,16 +24,18 @@ int main()
     srand(time(NULL));
     QuickSorter qs;
     MergeSorter ms;
-    CountingSorter cs;
+    //CountingSorter cs;
 
     Corruption cor;
-    StringTask2 ta2;
+    Levenshtein lev;
 
-    string s1 = "helloHello";
-    string s2 = "hello1Hello1hello1";
-    cout << ta2.task1(s1, s2) << endl;
-
-
+    string s1, s2;
+    cout << "Give first string: ";
+    cin >> s1;
+    cout << "Give second string: ";
+    cin >> s2;
+    int ans = lev.lev_dist(s1, s2);
+    cout << "levenshtein distance is " << ans << endl;
 
     int numberOfIterations;
     double commision;
@@ -52,12 +50,10 @@ int main()
         arr1.push_back(rand() % 10000 + 1);
     }
 
-    double sum = 0;
-    for (double n : arr1)
-    {
+    /*{
         sum += n;
     }
-    cout << "Before: " << sum << endl;
+    cout << "Before: " << sum << endl;*/
  
     auto begin = chrono::steady_clock::now();
 
