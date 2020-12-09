@@ -8,15 +8,14 @@
 
 #include "QuickSorter.h"
 #include "MergeSorter.h"
-#include "ShellSorter.h"
-#include "HeapSorter.h"
-#include "CountingSorter.h"
-#include "RadixSorter.h"
-#include "BucketSorter.h"
+
+
+#include "Corruption.h"
+#include "Levenshtein.h"
 
 using namespace std;
 
-void printArray(vector<long> arr);
+void printArray(vector<double> arr);
 
 int main()
 {
@@ -25,75 +24,51 @@ int main()
     srand(time(NULL));
     QuickSorter qs;
     MergeSorter ms;
-    ShellSorter shs;
-    HeapSorter hs;
-    CountingSorter cs;
-    RadixSorter rs;
-    BucketSorter bs;
+    //CountingSorter cs;
 
-    vector<long> arr1 = {};
+    Corruption cor;
+    Levenshtein lev;
+
+    string s1, s2;
+    cout << "Give first string: ";
+    cin >> s1;
+    cout << "Give second string: ";
+    cin >> s2;
+    int ans = lev.lev_dist(s1, s2);
+    cout << "levenshtein distance is " << ans << endl;
 
     int numberOfIterations;
-    cout << "Give a number of elements: ";
+    double commision;
+    cout << "Give a number of bank accounts: ";
     cin >> numberOfIterations;
+    cout << "Give an amount of commision(from 0 to 1): ";
+    cin >> commision;
 
+    vector<double> arr1 = {};
     for (int i = 0; i < numberOfIterations; i++)
     {
-        arr1.push_back(rand() % 100 + 1);
+        arr1.push_back(rand() % 10000 + 1);
     }
 
-    cout << "Choose your sort: " << endl << "1 - Shell sort" << endl << "2 - Heap sort" << endl;
-    cout << "3 - Counting sort" << endl << "4 - Radix sort" << endl << "5 - Bucket sort" << endl;
-    int sortType;
-    cin >> sortType;
-    vector<long> newArray;
-
-    cout << "Sorted or unsorted array?" << endl << "1 - sorted" << endl << "not 1 - unsorted" << endl;
-    int isSorted;
-    cin >> isSorted;
-    if (isSorted == 1)
-    {
-        arr1 = qs.sort(arr1);
+    /*{
+        sum += n;
     }
+    cout << "Before: " << sum << endl;*/
  
     auto begin = chrono::steady_clock::now();
-    if (sortType == 1)
-    {
-        newArray = shs.sort(arr1);
-    }
-    else if (sortType == 2)
-    {
-        newArray = hs.sort(arr1);
-    }
-    else if (sortType == 3)
-    {
-        newArray = cs.sort(arr1);
-    }
-    else if (sortType == 4)
-    {
-        //newArray = rs.sort(arr1);
-        newArray = rs.sort(arr1);
-    }
-    else if (sortType == 5)
-    {
-        newArray = bs.sort(arr1);
-    }
-    else
-    {
-        cout << "Error";
-        return 0;
-    }
-    auto end = chrono::steady_clock::now();
-    auto algTime = chrono::duration_cast<chrono::milliseconds>(end - begin);
-    cout << endl;
-   //printArray(newArray);
 
-    cout << endl << "To sort this array " << algTime.count() << " ms were spent";
+    cout <<"After: "<< cor.func(arr1, commision);
+
+    auto end = chrono::steady_clock::now();
+    auto algTime = chrono::duration_cast<chrono::microseconds>(end - begin);
+    cout << endl;
+
+    cout << endl << "To sort this array " << algTime.count() << " mcs were spent";
 
 }
 
 
-void printArray(vector<long> array)
+void printArray(vector<double> array)
 {
     int arraySize = array.size();
     for (int i = 0; i < arraySize; i++)
@@ -101,3 +76,4 @@ void printArray(vector<long> array)
         cout << array[i] << ", ";
     }
 }
+
