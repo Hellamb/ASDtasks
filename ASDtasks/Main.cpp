@@ -15,6 +15,7 @@
 #include "BucketSorter.h"
 
 #include "Corruption.h"
+#include "StringTask2.h"
 
 using namespace std;
 
@@ -30,8 +31,11 @@ int main()
     CountingSorter cs;
 
     Corruption cor;
+    StringTask2 ta2;
 
-
+    string s1 = "helloHello";
+    string s2 = "hello1Hello1hello1";
+    cout << ta2.task1(s1, s2) << endl;
 
 
 
